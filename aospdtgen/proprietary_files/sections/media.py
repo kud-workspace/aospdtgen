@@ -26,5 +26,12 @@ class MediaOmxSection(Section):
 		"lib(64)?/libOmx.*\.so",
 	]
 
+class MediaStagefrightSection(Section):
+	name = "Media (Stagefright)"
+	patterns = [
+		"lib(64)?/libstagefright.*.\.so",
+	]
+
 register_section(MediaCodec2Section)
 register_section(MediaOmxSection)
+register_section(MediaStagefrightSection)
