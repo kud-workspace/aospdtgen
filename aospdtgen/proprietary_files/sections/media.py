@@ -14,6 +14,19 @@ class MediaCodec2Section(Section):
 		"etc/seccomp_policy/codec2.vendor.*.-arm\.policy",
 	]
 
+class MediaDolbySection(Section):
+	name = "Media (Dolby)"
+	interfaces = [
+		"vendor.dolby.hardware.dms",
+	]
+	libraries = [
+		"libdapparamstorage",
+		"libdeccfg",
+	]
+	folders = [
+		"etc/dolby",
+	]
+
 class MediaOmxSection(Section):
 	name = "Media (OMX)"
 	interfaces = [
@@ -33,5 +46,6 @@ class MediaStagefrightSection(Section):
 	]
 
 register_section(MediaCodec2Section)
+register_section(MediaDolbySection)
 register_section(MediaOmxSection)
 register_section(MediaStagefrightSection)
